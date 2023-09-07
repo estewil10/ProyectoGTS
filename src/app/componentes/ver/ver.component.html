@@ -1,0 +1,51 @@
+
+ <table class="table table-primary">
+        <thead>
+            <tr>
+                <th scope="col">Documento:</th>
+                <th scope="col">Nombre del paciente:</th>
+                <th scope="col">Teléfono: </th>
+                <th scope="col">Dirección: </th>
+                <th scope="col">Sexo:</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr *ngFor="let paciente of Pacientes">
+                <td>{{paciente.numero}}</td>
+                <td>{{paciente.nombre}} {{paciente.apellido}}</td>
+                <td>{{paciente.telefono}}</td>
+                <td>{{paciente.direccion}}</td>
+                <td>{{paciente.sexo}}</td>
+            </tr>
+        </tbody>
+    </table>
+    <button type="button" class="btn btn-primary" routerLink="/historia-clinica">Agregar Hisrotia</button>
+    <button type="button" class="btn btn-light" routerLink="/tablero">Regresar</button>
+<div clas="container-fluid">
+<div class="card">
+    <div class="card-body">
+        <div class="table-responsive">
+            <table class="table table-primary">
+                <thead>
+                    <tr>
+                        <th scope="col">Column 1</th>
+                        <th scope="col">Column 2</th>
+                        <th scope="col">Column 3</th>
+                        <th scope="col">Column 3</th>
+                        <th scope="col">Column 3</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr class="">
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                 </tbody>
+            </table>
+        </div>   
+    </div>
+</div>
+</div>

@@ -1,0 +1,48 @@
+
+
+<div class="container" >
+  <mat-form-field>
+    <input [formControl]="Buscar" matInput placeholder="Buscar pacientes" >
+  </mat-form-field>
+    <div class="card"  style="background-color: rgb(114, 186, 189); width:auto;" > 
+        <div class="card-body">
+          <button type="button" class="btn btn-primary" routerLink="/agregar">Agregar Paciente</button><br><br>
+          <div class="border-bottom border-body"></div>      
+        <br>
+            <table class="table " style="width: 100%;">
+                <thead>
+                  <tr>
+                    <th scope="col">TipoID</th>
+                    <th scope="col">Número</th>
+                    <th scope="col">Nombre</th>
+                    <th scope="col">Apellidos</th>
+                    <th scope="col">Teléfono</th>
+                    <th scope="col">Correo</th>
+                    <th scope="col">Dirección</th>
+                    <th scope="col"></th>
+                    <th scope="col"></th>
+                    <th scope="col"></th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr *ngFor="let paciente of Pacientes; let iControl=index">
+                    <th scope="row">{{paciente.tipo_id}}</th>
+                    <td>{{ paciente.numero}}</td>
+                    <td>{{ paciente.nombre}}</td>
+                    <td>{{ paciente.apellido}}</td>
+                    <td>{{ paciente.telefono}}</td>
+                    <td>{{ paciente.correo}}</td> 
+                    <td>{{ paciente.direccion}}</td>
+                    <td><a class="btn btn-success" routerLink="ver/{{paciente.id}}">Ver</a></td> 
+                    <td><a class="btn btn-primary" routerLink="editar/{{paciente.id}}" >
+                      Editar</a>
+                    </td> 
+                    <td><a  class="btn btn-danger" (click)="Eliminar(paciente.id, iControl)">Eliminar</a></td>   
+                  </tr>
+                </tbody>
+              </table>
+        </div>
+      </div>
+      
+      
+      

@@ -1,0 +1,114 @@
+<div class="card text-start" style="background-color: rgb(137, 185, 187);">
+  <button type="button" class="btn btn-Light btn-lg">EDITAR PACIENTE</button>
+  <div class="card-body">
+    <form ngNativeValidate [formGroup]="formGroup" (ngSubmit)="Editar()" >
+      <div class="row g-2">
+        <div class="col-md">
+          <label >Tipo identificación</label>
+          <div class="form-floating">
+            <select class="form-select" formControlName="tipo_id" aria-label="Default select example" required>
+              <option value="CC">CC - Cedula de ciudadania</option>
+              <option value="CE">CE - Cedula de extranjeria </option>
+              <option value="TI">TI - Tarjeta de identidad</option>
+              <option value="RC">RC - Registro Civil</option>
+              <option value="NV">NV - Nacido vivo</option>
+              <option value="PE">PE - Permiso especial</option>
+              <option value="PA">PA - Pasaporte</option>
+            </select><br>
+          </div>
+        </div>
+        <div class="col-md">
+          <label>Número de identificación</label>
+          <div class="form-floating">
+           <input type="number" class="form-control" name="" formControlName="numero" id="numero" aria-describedby="emailHelp" required>
+          </div>
+        </div>
+        <div class="col-md">
+          <label>Nombre</label>
+          <div class="form-floating">
+          <input type="text" class="form-control" name="" formControlName="nombre" id="nombre" required><br>
+          </div>
+        </div>
+      </div> 
+        <div class="form-group">
+          <div class="row g-2">
+            <div class="col-md">
+              <label>Apellidos</label>
+              <div class="form-floating">
+                <input type="text" class="form-control" name="" formControlName="apellido" id="apellido" required><br>
+              </div>
+            </div>
+            <div class="col-md">
+              <label>Teléfono</label>
+              <div class="form-floating">
+                <input type="number" class="form-control" name="" formControlName="telefono" id="telefono" required><br>
+              </div>
+            </div>
+            <div class="col-md">
+              <label>Dirección</label>
+              <div class="form-floating">
+                <input type="text" class="form-control" name="" formControlName="direccion" id="direccion" required><br>
+              </div>
+            </div>
+          </div>  
+        </div>
+        <div class="form-group">
+          <div class="row g-2">
+            <div class="col-md">
+              <label>Correo</label>
+              <div class="form-floating">
+                <input type="text" class="form-control" name="" formControlName="correo" id="correo" required><br>
+              </div>
+            </div>
+            <div class="col-md">
+              <label>Fecha de nacimiento</label>
+              <div class="form-floating">
+                <input type="date" class="form-control" name="" formControlName="fecha" id="fecha" required><br>
+              </div>
+            </div>
+            <div class="col-md">
+              <label>Edad</label>
+              <div class="form-floating">
+                <input type="number" class="form-control" name="" formControlName="edad" id="edad"  required><br>
+              </div>
+            </div>
+            <div class="col-md">
+              <label>Sexo</label>
+              <div class="form-floating">
+                <select class="form-select" formControlName="sexo" aria-label="Default select example">
+                  <option value="Masculino">Masculino</option>
+                  <option value="Femenino">Femenino</option>
+                </select><br>
+              </div>
+            </div>
+          </div>  
+        </div>
+        <div class="form-group">
+          <div class="row g-2">
+            <div class="col-md">
+              <label>Contrato</label>
+              <div class="form-floating">
+                <input type="text" class="form-control" name="" formControlName="contrato" id="contrato" placeholder=""><br>
+              </div>
+            </div>
+            <div class="col-md">
+              <label>Ciudad</label>
+              <div class="form-floating">
+                <input type="text" class="form-control" name="" formControlName="ciudad" id="ciudad" placeholder=""><br>
+              </div>
+            </div>
+            <div class="col-md">
+              <label>Departamento</label>
+              <div class="form-floating">
+                <input type="text" class="form-control" name="" formControlName="departamento" id="departamento" placeholder="">
+              </div>
+            </div>
+          </div>  
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" routerLink="/tablero">Cancelar</button>
+          <button type="submit" class="btn btn-primary">Editar</button>
+        </div>
+    </form>
+  </div>
+</div>
