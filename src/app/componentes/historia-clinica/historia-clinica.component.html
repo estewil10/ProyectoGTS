@@ -1,1 +1,149 @@
-<p>historia-clinica works!</p>
+
+	
+			<div class="card card-body">
+				<div class="card text-start" style="background-color: rgb(114, 186, 189);">
+					<div class="card-body">
+						<form class="form-floating" ngNativeValidate [formGroup]="formGroup" (ngSubmit)="agregarHc()">
+							<div class="row g-2">
+								<h2>SUBJETIVO</h2>
+								<div class="col-md">
+									<label>Motivo de consulta</label>
+									<div class="form-floating">
+										<textarea class="form-control" name="" formControlName="mconsulta" id="mconsulta"></textarea>
+									</div><br>
+								</div>
+								<div class="col-md">
+									<label>Enfermedad actual</label>
+									<div class="form-floating">
+										<textarea class="form-control" name="" formControlName="eactual" id="eactual"></textarea>
+									</div>
+								</div>
+							</div>
+							<div class="col">
+											<div class="form-group">
+												<div class="row g-2">
+													<h2>ANTECEDENTES</h2>
+													<div class="col-md">
+														<label>Personales</label>
+														<div class="form-floating">
+															<textarea class="form-control" name="" formControlName="apersonales" id="apersonales"></textarea>
+														</div>
+													</div>
+													<div class="col-md">
+														<label>Familiares</label>
+														<div class="form-floating">
+															<textarea class="form-control" name="" formControlName="afamiliares" id="afamiliares"></textarea><br>
+														</div>
+													</div>
+												</div>
+											</div>
+									
+              </div><br>
+              <div class="col">
+                    <div class="form-group">
+                      <div class="row g-2">
+                        <h2>Examen físico</h2>
+                        <div class="col-md">
+                          <label>Cabeza</label>
+                          <div class="form-floating">
+                            <input type="text" class="form-control" name="" formControlName="cabeza" id="cabeza"><br>
+                          </div>
+                        </div>
+                        <div class="col-md">
+                          <label>Cuello</label>
+                          <div class="form-floating">
+                            <input type="text" class="form-control" name="" formControlName="cuello" id="cuello"><br>
+                          </div>
+                        </div>
+                        <div class="col-md">
+                          <label>Torax</label>
+                          <div class="form-floating">
+                            <input type="text" class="form-control" name="" formControlName="torax" id="torax"><br>
+                          </div>
+                        </div>
+                        <div class="col-md">
+                          <label>Abdomen</label>
+                          <div class="form-floating">
+                            <input type="text" class="form-control" name="" formControlName="abdomen" id="abdomen"><br>
+                          </div>
+                        </div>
+                        <div class="col-md">
+                          <label>Pelvis</label>
+                          <div class="form-floating">
+                            <input type="text" class="form-control" name="" formControlName="pelvis" id="pelvis"><br>
+                          </div>
+                        </div>
+                        <div class="col-md">
+                          <label>Extremidades</label>
+                          <div class="form-floating">
+                            <input type="text" class="form-control" name="" formControlName="extremidades" id="extremidades"><br>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="form-group">
+                      <div class="row g-2">
+                        <div class="col-md">
+                          <label>Temp</label>
+                          <div class="form-floating">
+                            <input type="number" class="form-control" name="" formControlName="temp" id="temp"><br>
+                          </div>
+                        </div>
+                        <div class="col-md">
+                          <label>P.A</label>
+                          <div class="form-floating">
+                            <input type="number" class="form-control" name="" formControlName="pa" id="pa"><br>
+                          </div>
+                        </div>
+                        <div class="col-md">
+                          <label>F.C</label>
+                          <div class="form-floating">
+                            <input type="number" class="form-control" name="" formControlName="fc" id="fc"><br>
+                          </div>
+                        </div>
+                        <div class="col-md">
+                          <label>F.R</label>
+                          <div class="form-floating">
+                            <input type="number" class="form-control" name="" formControlName="fr" id="fr"><br>
+                          </div>
+                        </div>
+                        <div class="col-md">
+                          <label>PU</label>
+                          <div class="form-floating">
+                            <input type="number" class="form-control" name="" formControlName="pu" id="pu"><br>
+                          </div>
+                        </div>
+                        <div class="col-md">
+                          <label>Peso</label>
+                          <div class="form-floating">
+                            <input type="number" class="form-control" name="" formControlName="peso" id="peso"><br>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="row g-2">
+                        <div class="col-md">
+                          <label>Talla</label>
+                          <div class="form-floating">
+                            <input type="number" class="form-control" name="" formControlName="talla" id="talla"><br>
+                          </div>
+                        </div>
+                        <div class="col-md">
+                          <label>I.M.C</label>
+                          <div class="form-floating">
+                            <input type="number" class="form-control" name="" formControlName="imc" id="imc"><br>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div><br>
+        <div class="modal-footer">
+          <a class="btn btn-primary" routerLink="/tablero">Cerrar</a>
+          <button type="submit" class="btn btn-success">Agregar</button>
+        </div>
+            </form>
+          </div>
+        </div>
+      </div>
+<br>
+ 
+        

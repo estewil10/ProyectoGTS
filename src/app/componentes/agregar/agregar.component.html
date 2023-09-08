@@ -31,13 +31,22 @@
       <input type="text" class="form-control" name="" formControlName="nombre" id="nombre" required><br>
       </div>
     </div>
+    <div class="col-md">
+      <label>Apellidos</label>
+      <div class="form-floating">
+        <input type="text" class="form-control" name="" formControlName="apellido" id="apellido" required><br>
+      </div>
+    </div>
   </div> 
     <div class="form-group">
       <div class="row g-2">
         <div class="col-md">
-          <label>Apellidos</label>
+          <label>Sexo</label>
           <div class="form-floating">
-            <input type="text" class="form-control" name="" formControlName="apellido" id="apellido" required><br>
+            <select class="form-select" formControlName="sexo" required>
+              <option value="Masculino">Masculino</option>
+              <option value="Femenino">Femenino</option>
+            </select><br>
           </div>
         </div>
         <div class="col-md">
@@ -50,6 +59,12 @@
           <label>Dirección</label>
           <div class="form-floating">
             <input type="text" class="form-control" name="" formControlName="direccion" id="direccion" required><br>
+          </div>
+        </div>
+        <div class="col-md">
+          <label>Barrio</label>
+          <div class="form-floating">
+            <input type="text" class="form-control" name="" formControlName="barrio" id="barrio" required><br>
           </div>
         </div>
       </div>  
@@ -75,12 +90,9 @@
           </div>
         </div>
         <div class="col-md">
-          <label>Sexo</label>
+          <label>Lugar de nacimiento</label>
           <div class="form-floating">
-            <select class="form-select" formControlName="sexo" required>
-              <option value="Masculino">Masculino</option>
-              <option value="Femenino">Femenino</option>
-            </select><br>
+            <input type="text" class="form-control" name="" formControlName="lnacimiento" id="lnacimiento"  required><br>
           </div>
         </div>
       </div>  
@@ -91,6 +103,12 @@
           <label>Contrato</label>
           <div class="form-floating">
             <input type="text" class="form-control" name="" formControlName="contrato" id="contrato" required><br>
+          </div>
+        </div>
+        <div class="col-md">
+          <label>Regimen</label>
+          <div class="form-floating">
+            <input type="text" class="form-control" name="" formControlName="regimen" id="regimen" required><br>
           </div>
         </div>
         <div class="col-md">
@@ -108,7 +126,8 @@
       </div>  
     </div>
     <div class="modal-footer">
-      <button type="button" class="btn btn-secondary" routerLink="/tablero">Cancelar</button>
+      <div></div>
+      <button type="button" class="btn btn-secondary" routerLink="/tablero">Cancelar</button> 
       <button type="submit" class="btn btn-primary">Agregar</button>
     </div>     
   </form>

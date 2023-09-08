@@ -7,11 +7,14 @@ export class Paciente {
     apellido!:string;
     telefono!:number;
     direccion!:string;
+    barrio!:string;
     correo!:string;
     fecha!:Date;
     edad!:number;
+    lnacimiento!:string;
     sexo!:string;
     contrato!:string;
+    regimen!:string;
     ciudad!:string;
     departamento!:string;
 }

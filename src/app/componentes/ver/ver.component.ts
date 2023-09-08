@@ -11,12 +11,21 @@ import { AgregarService } from 'src/app/servicios/agregar.service';
 export class VerComponent implements OnInit {
 
   Pacientes:any;
+  Historias: any;
 
 constructor(private agregarService: AgregarService, private router:Router, private http: HttpClient){}
 
   ngOnInit():void{
     this.agregarService.listarPacientes().subscribe(data => {
          this.Pacientes=data;
+
+         this.agregarService.listarhistoria().subscribe(data => {
+          this.Historias=data;
+          console.log(data);
+    
+          //this.BuscarPaciente();
+          
+    });
     
   });
 

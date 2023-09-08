@@ -2,6 +2,7 @@ import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { Observable } from 'rxjs';
 import { Paciente } from './paciente';
+import { Historia } from './historia';
 
 @Injectable({
   providedIn: 'root'
@@ -37,7 +38,13 @@ export class AgregarService {
     return this.http.get(this.API+"?buscar="+nombre);
   }
 
-  
+  agregarHc(dato:Historia):Observable<any>{
+    return this.http.post(this.API+"?insertarHC=1",dato);
+  }
+
+  listarhistoria(){
+    return this.http.get(this.API);
+  }
 
 
 

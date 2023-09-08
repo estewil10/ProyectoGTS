@@ -11,8 +11,8 @@ const routes: Routes = [
   {path: "tablero", component:TableroComponent},
   {path: "agregar", component:AgregarComponent},
   {path: "tablero/editar/:id", component:EditarComponent},
-  {path: "tablero/ver/:id", component:VerComponent},
-  {path: "historia-clinica", component:HistoriaClinicaComponent}
+  {path: "ver/:id", component:VerComponent},
+  {path: "historia-clinica", component:HistoriaClinicaComponent},
 ];
 
 @NgModule({

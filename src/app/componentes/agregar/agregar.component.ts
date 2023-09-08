@@ -22,11 +22,14 @@ export class AgregarComponent implements OnInit{
       apellido: ['', Validators.required],
       telefono: ['', Validators.required],
       direccion: ['', Validators.required],
+      barrio: ['', Validators.required],
       correo: ['', Validators.required],
       fecha: ['', Validators.required],
       edad: ['', Validators.required],
+      lnacimiento: ['', Validators.required],
       sexo: ['', Validators.required],
       contrato: ['', Validators.required],
+      regimen: ['', Validators.required],
       ciudad: ['', Validators.required],
       departamento: ['', Validators.required],
 
@@ -38,11 +41,12 @@ export class AgregarComponent implements OnInit{
   }
   
   agregar(){
+    if(window.confirm("Desea Agregar el paciente?")){
     this.agregarService.agregar(this.formGroup.value).subscribe();
     this.ruteador.navigateByUrl('/tablero');
       
     }
-    
+  }
   }
 
 

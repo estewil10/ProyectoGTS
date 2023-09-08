@@ -24,10 +24,13 @@ export class EditarComponent implements OnInit {
         correo: data[0]['correo'],
         telefono: data[0]['telefono'],
         direccion: data[0]['direccion'],
+        barrio: data[0]['barrio'],
         fecha: data[0]['fecha'],
         edad: data[0]['edad'],
+        lnacimiento: data[0]['lnacimiento'],
         sexo: data[0]['sexo'],
         contrato: data[0]['contrato'],
+        regimen: data[0]['regimen'],
         ciudad: data[0]['ciudad'],
         departamento: data[0]['departamento']
        })
@@ -41,11 +44,14 @@ export class EditarComponent implements OnInit {
         apellido: [''],
         telefono: [''],
         direccion: [''],
+        barrio: [''],
         correo: [''],
         fecha: [''],
         edad: [''],
+        lnacimiento: [''],
         sexo: [''],
         contrato: [''],
+        regimen: [''],
         ciudad: [''],
         departamento: ['']
     
@@ -57,10 +63,12 @@ export class EditarComponent implements OnInit {
   }
   
   Editar():any{
+    if(window.confirm("Desea actualizar el paciente?")){
     this.agregarService.EditarEmpleado(this.ID, this.formGroup.value).subscribe(()=>{
       this.ruteador.navigateByUrl('/tablero');  
     });
   }
+}
 }
   
 

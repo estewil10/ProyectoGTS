@@ -20,14 +20,13 @@ constructor(private agregarService: AgregarService, private router:Router, priva
   ngOnInit():void{
     this.agregarService.listarPacientes().subscribe(data => {
          this.Pacientes=data;
-
-         this.BuscarPaciente();
-         
+    
     
   });
 
   }
-  Buscar = new FormControl('');
+  
+ 
 
 
   Eliminar(id:any, iControl: any){
@@ -40,6 +39,7 @@ constructor(private agregarService: AgregarService, private router:Router, priva
 }
 
 }
+Buscar = new FormControl('');
 
 BuscarPaciente(){
   this.Buscar.valueChanges.pipe(debounceTime(2000)).subscribe(data =>{
