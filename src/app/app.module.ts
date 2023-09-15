@@ -18,7 +18,8 @@ import { EditarComponent } from './componentes/editar/editar.component';
 import { EliminarComponent } from './componentes/eliminar/eliminar.component';
 import { VerComponent } from './componentes/ver/ver.component';
 import { HistoriaClinicaComponent } from './componentes/historia-clinica/historia-clinica.component';
-import { BrowserAnimationsModule } from '@angular/platform-browser/animations'
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { ListarhcComponent } from './componentes/listarhc/listarhc.component'
 
 
 
@@ -31,6 +32,7 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations'
     EliminarComponent,
     VerComponent,
     HistoriaClinicaComponent,
+    ListarhcComponent,
     
   ],
   imports: [

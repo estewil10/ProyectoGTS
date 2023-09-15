@@ -1,4 +1,7 @@
 export class Historia {
+
+    nhistoria!:string;
+    fecha!:string;
     mconsulta!:string;
     eactual!:string;
     apersonales!:string;

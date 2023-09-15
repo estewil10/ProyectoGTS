@@ -4,24 +4,24 @@ import { Router } from '@angular/router';
 import { AgregarService } from 'src/app/servicios/agregar.service';
 
 @Component({
-  selector: 'app-ver',
-  templateUrl: './ver.component.html',
-  styleUrls: ['./ver.component.scss']
+  selector: 'app-listarhc',
+  templateUrl: './listarhc.component.html',
+  styleUrls: ['./listarhc.component.scss']
 })
-export class VerComponent implements OnInit {
+export class ListarhcComponent implements OnInit {
 
-  Pacientes:any;
+
   Historias: any;
 
 constructor(private agregarService: AgregarService, private router:Router, private http: HttpClient){}
 
   ngOnInit():void{
-    this.agregarService.listarPacientes().subscribe(data => {
-         this.Pacientes=data;
 
+         this.agregarService.listarhistoria().subscribe(data => {
+          this.Historias=data;
+          console.log(this.Historias);
           
     });
-
-
+    
 }
 }

@@ -18,53 +18,31 @@
                 <td>{{paciente.sexo}}</td>
             </tr>
         </tbody>
+        <thead>
+          <tr>
+              <th scope="col">Correo:</th>
+              <th scope="col">Fecha de nacimiento:</th>
+              <th scope="col">Edad: </th>
+              <th scope="col">Contrato: </th>
+              <th scope="col">Ciudad:</th>
+          </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let paciente of Pacientes">
+            <td>{{paciente.correo}}</td>
+            <td>{{paciente.fecha}}</td>
+            <td>{{paciente.edad}}</td>
+            <td>{{paciente.contrato}}</td>
+            <td>{{paciente.ciudad}}</td>
+        </tr>
+    </tbody>
     </table>
     <button type="button" class="btn btn-success" routerLink="/historia-clinica">Agregar Hisrotia</button><button type="button" class="btn btn-primary" routerLink="/tablero">Regresar</button><br><br>
     
     <div class="card text-white" style="background-color: rgb(114, 186, 189);">
         <div class="card-body">
-         <table class="table">
-           <thead>
-             <tr>
-               <th scope="col">Motivo de consulta</th>
-               <th scope="col">Enfermedad actual</th>
-               <th scope="col">Cabeza</th>
-               <th scope="col">Cuello</th>
-               <th scope="col">Torax</th>
-               <th scope="col">Abdomen</th>
-               <th scope="col">Pelvis</th>
-               <th scope="col">Extremidades</th>
-               <th scope="col">Temp</th>
-               <th scope="col">P.A</th>
-               <th scope="col">F.C</th>
-               <th scope="col">F.R</th>
-               <th scope="col">PU</th>
-               <th scope="col">Peso</th>
-               <th scope="col">Talla</th>
-               <th scope="col">IMC</th>
-             </tr>
-           </thead>
-           <tbody>
-             <tr *ngFor="let historia of Historias">
-               <th>{{historia.mconsulta}}</th>
-               <td></td>
-               <td></td>
-               <td></td>
-               <td></td>
-               <td></td>
-               <td></td>
-               <td></td>
-               <td></td>
-               <td></td>
-               <td></td>
-               <td></td>
-               <td></td>
-               <td></td>
-               <td></td>
-               <td></td>
-             </tr>
-           </tbody>
-         </table>
+          <app-listarhc></app-listarhc>
+        
         </div>
       </div>
       

@@ -17,6 +17,7 @@ export class HistoriaClinicaComponent {
 
     this.formGroup=this.formulario.group({
 
+      nhistoria: ['', Validators.required],
       mconsulta: ['', Validators.required],
       eactual: ['', Validators.required],
       apersonales: ['', Validators.required],
@@ -35,7 +36,6 @@ export class HistoriaClinicaComponent {
       peso: ['', Validators.required],
       talla: ['', Validators.required],
       imc: ['', Validators.required],
-
     })
   }
 

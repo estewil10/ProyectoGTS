@@ -1,6 +1,4 @@
 export class Paciente {
-
-
     tipo_id!:string;
     numero!:number;
     nombre!:string;
