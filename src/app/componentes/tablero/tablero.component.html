@@ -4,10 +4,10 @@
   <mat-form-field>
     <input [formControl]="Buscar" matInput placeholder="Buscar pacientes" >
   </mat-form-field>
-    <div class="card"  style="background-color: rgb(114, 186, 189); width:auto;" > 
+    <div class="card"  style="background-color: rgb(114, 186, 189); width:auto;" >
         <div class="card-body">
           <button type="button" class="btn btn-primary" routerLink="/agregar">Agregar Paciente</button><br><br>
-          <div class="border-bottom border-body"></div>      
+          <div class="border-bottom border-body"  *ngIf="Pacientes.length === 0">No hay Pacientes Registrados</div>
         <br>
             <table class="table " style="width: 100%;">
                 <thead>
@@ -31,18 +31,18 @@
                     <td>{{ paciente.nombre}}</td>
                     <td>{{ paciente.apellido}}</td>
                     <td>{{ paciente.telefono}}</td>
-                    <td>{{ paciente.correo}}</td> 
+                    <td>{{ paciente.correo}}</td>
                     <td>{{ paciente.direccion}}</td>
-                    <td><a class="btn btn-success" routerLink="/ver/{{paciente.id}}">Atender</a></td> 
+                    <td><a class="btn btn-success" routerLink="/ver/{{paciente.id}}">Atender</a></td>
                     <td><a class="btn btn-primary" routerLink="editar/{{paciente.id}}" >
                       Editar</a>
-                    </td> 
-                    <td><a  class="btn btn-danger" (click)="Eliminar(paciente.id, iControl)">Eliminar</a></td>   
+                    </td>
+                    <td><a  class="btn btn-danger" (click)="Eliminar(paciente.id, iControl)">Eliminar</a></td>
                   </tr>
                 </tbody>
               </table>
         </div>
       </div>
-      
-      
-      
+
+
+
